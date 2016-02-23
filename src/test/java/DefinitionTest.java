@@ -13,4 +13,9 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("Mow the lawn");
     assertEquals(true, myDefinition instanceof Definition);
   }
+  @Test
+  public void definition_instantiatesWithDescription_true() {
+    Definition myDefinition = new Definition("Mow the lawn");
+    assertEquals("Mow the lawn", myDefinition.getDescription());
+  }
 }
