@@ -23,4 +23,9 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("Mow the lawn");
     assertEquals(false, myDefinition.isCompleted());
   }
+  @Test
+  public void getCreateAt_instantiatesWithCurrentTime_today() {
+    Definition myDefinition = new Definition("Mow the lawnn");
+    assertEquals(LocalDateTime.now().getDayOfWeek(), myDefinition.getCreatedAt().getDayOfWeek());
+  }
 }
