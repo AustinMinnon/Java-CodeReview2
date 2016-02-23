@@ -20,5 +20,12 @@ public class WordTest {
     Word testWord = new Word("Home");
     assertTrue(testWord.getDefinitions() instanceof ArrayList);
   }
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("Home");
+    Word secondWord = new Word("Home");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
 
 }
