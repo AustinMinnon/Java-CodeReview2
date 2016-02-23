@@ -15,4 +15,10 @@ public class WordTest {
     Word testWord = new Word("Home");
     assertTrue(Word.all().size() == testWord.getId());
   }
+  @Test
+  public void getDefinitions_initiallyReturnsEmptyArrayList() {
+    Word testWord = new Word("Home");
+    assertTrue(testWord.getDefinitions() instanceof ArrayList);
+  }
+
 }
