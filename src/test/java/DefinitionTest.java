@@ -28,4 +28,11 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("Mow the lawnn");
     assertEquals(LocalDateTime.now().getDayOfWeek(), myDefinition.getCreatedAt().getDayOfWeek());
   }
+  @Test
+  public void all_returnsAllInstancesOfDefinition_true() {
+    Definition firstDefinition = new Definition("Mow the lawn");
+    Definition secondDefinition = new Definition("Buy groceries");
+    assertTrue(Definition.all().contains(firstDefinition));
+    assertTrue(Definition.all().contains(secondDefinition));
+  }
 }
