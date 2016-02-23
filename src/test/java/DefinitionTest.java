@@ -44,4 +44,10 @@ public class DefinitionTest {
   public void find_returnsNullWhenNoDefinitionFound_null() {
     assertTrue(Definition.find(999) == null);
   }
+  @Test
+  public void clear_emptiesAllDefinitionsFromArrayList() {
+    Definition myDefinition = new Definition("Mow the lawn");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
 }
