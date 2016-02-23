@@ -38,4 +38,11 @@ public class WordTest {
     Word testWord = new Word("Home");
     assertEquals(Word.find(testWord.getId()), testWord);
   }
+  @Test
+  public void addWord_addsWordToList() {
+    Word testWord = new Word("Bob's Used Words");
+    Word testWord = new Word("Mow the lawn");
+    testWord.addWord(testWord);
+    assertTrue(testWord.getWords().contains(testWord));
+  }
 }
