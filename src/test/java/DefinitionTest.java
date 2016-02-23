@@ -18,4 +18,9 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("Mow the lawn");
     assertEquals("Mow the lawn", myDefinition.getDescription());
   }
+  @Test
+  public void isCompleted_isFalseAfterInstantiaon_false() {
+    Definition myDefinition = new Definition("Mow the lawn");
+    assertEquals(false, myDefinition.isCompleted());
+  }
 }
