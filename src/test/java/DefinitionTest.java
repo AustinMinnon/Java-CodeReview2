@@ -40,4 +40,8 @@ public class DefinitionTest {
     Definition myDefinition = new Definition("Mow the lawn");
     assertEquals(Definition.all().size(), myDefinition.getId());
  }
+  @Test
+  public void find_returnsNullWhenNoDefinitionFound_null() {
+    assertTrue(Definition.find(999) == null);
+  }
 }
