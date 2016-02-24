@@ -1,0 +1,8 @@
+<h3>Here are all the definitions in this word:</h3>
+
+#foreach($definition in $word.getWords())
+  <h1>$definition.getDescription()</h1>
+#end
+
+<a href="/words/$word.getId()/definitions/new">Add a new definition</a>
+<a href="/">Return to Main Page</a>

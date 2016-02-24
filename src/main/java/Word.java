@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class Word {
-  private static ArrayList<Word> instances = new ArrayList<Word>();
+  private static ArrayList<Word> dictionary = new ArrayList<Word>();
 
   private String mName;
   private int mId;
@@ -8,8 +8,8 @@ public class Word {
 
   public Word(String name) {
     mName = name;
-    instances.add(this);
-    mId = instances.size();
+    dictionary.add(this);
+    mId = dictionary.size();
     mDefinitions = new ArrayList<Definition>();
   }
 
@@ -30,18 +30,20 @@ public class Word {
   }
 
   public static ArrayList<Word> all() {
-    return instances;
+    return dictionary;
   }
 
   public static void clear() {
-    instances.clear();
+    dictionary.clear();
   }
 
   public static Word find(int id) {
     try {
-      return instances.get(id - 1);
+      return dictionary.get(id - 1);
     } catch (IndexOutOfBoundsException exception) {
       return null;
     }
   }
+
+
 }

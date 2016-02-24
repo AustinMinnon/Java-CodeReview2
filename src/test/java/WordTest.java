@@ -39,10 +39,10 @@ public class WordTest {
     assertEquals(Word.find(testWord.getId()), testWord);
   }
   @Test
-  public void addWord_addsWordToList() {
-    Word testWord = new Word("Bob's Used Words");
-    Word testWord = new Word("Mow the lawn");
-    testWord.addWord(testWord);
-    assertTrue(testWord.getWords().contains(testWord));
+  public void adddefinition_addsWordToList() {
+    Word testWord = new Word("Bob's Used Word");
+    Definition testDefinition = new Definition("Bob's new definition");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 }

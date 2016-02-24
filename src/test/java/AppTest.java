@@ -22,26 +22,17 @@ public class AppTest extends FluentTest {
   @Rule
   public ClearRule clearRule = new ClearRule();
 
-  // @Test
-  // public void rootTest() {
-  //   goTo("http://localhost:4567/");
-  //   assertThat(pageSource()).contains("Todo list!");
-  // }
-  //
+  @Test
+  public void rootTest() {
+    goTo("http://localhost:4567/");
+    assertThat(pageSource()).contains("Dictionary");
+  }
+
   // @Test
   // public void WordIsCreatedTest() {
   //   goTo("http://localhost:4567/");
   //   click("a", withText("Add a new Word"));
   //   fill("#name").with("Mow the lawn");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("Your Word has been saved.");
-  // }
-  //
-  // @Test
-  // public void WordIsCreatedTest() {
-  //   goTo("http://localhost:4567/");
-  //   click("a", withText("Add a new Word"));
-  //   fill("#name").with("Household chores");
   //   submit(".btn");
   //   assertThat(pageSource()).contains("Your Word has been saved.");
   // }
