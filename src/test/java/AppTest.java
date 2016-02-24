@@ -34,7 +34,7 @@ public class AppTest extends FluentTest {
     click("a", withText("Add Word"));
     fill("#name").with("Mow the lawn");
     submit(".btn");
-    assertThat(pageSource()).contains("Your word has been saved.");
+    assertThat(pageSource()).contains("Your word has been saved");
   }
 
   @Test
@@ -44,5 +44,31 @@ public class AppTest extends FluentTest {
     submit(".btn");
     click("a", withText("view words"));
     assertThat(pageSource()).contains("Household chores");
+  }
+  // @Test
+  //   public void defintionsAreAddedAndDisplayed() {
+  //     goTo("http://localhost:4567/words/new");
+  //     fill("#name").with("cool");
+  //     submit(".btn");
+  //     click("a", withText("View Word List"));
+  //     click("a", withText("cool"));
+  //     click("a", withText("Add a new Definition"));
+  //     fill("#definition").with("of or at a fairly low temperature.");
+  //     submit(".btn");
+  //     assertThat(pageSource()).contains("of or at a fairly low temperature.");
+// }
+  @Test
+  public void DefinitionIsDisplayedinWordTest() {
+    goTo("http://localhost:4567/words/new");
+    fill("#name").with("Great");
+    submit(".btn");
+    click("a", withText("view words"));
+    click("a", withText("Great"));
+    click("a", withText("Add a new definition"));
+    fill("#description").with("a wonderful word definition.");
+    submit(".btn");
+    click("a", withText("view words"));
+    click("a", withText("Great"));
+    assertThat(pageSource()).contains("a wonderful word definition.");
   }
 }
