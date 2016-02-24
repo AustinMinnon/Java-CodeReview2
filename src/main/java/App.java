@@ -102,7 +102,7 @@ public class App {
     definitions.add(newDefinition);
     model.put("definitions", definitions);
     model.put("word", word);
-    model.put("template", "templates/word.vtl");
+    model.put("template", "templates/words.vtl");
     return new ModelAndView(model, layout);
   }, new VelocityTemplateEngine());
   }

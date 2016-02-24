@@ -45,15 +45,4 @@ public class AppTest extends FluentTest {
     click("a", withText("view words"));
     assertThat(pageSource()).contains("Household chores");
   }
-  //
-  // @Test
-  // public void WordWordsFormIsDisplayed() {
-  //   goTo("http://localhost:4567/categories/new");
-  //   fill("#name").with("Shopping");
-  //   submit(".btn");
-  //   click("a", withText("View categories"));
-  //   click("a", withText("Shopping"));
-  //   click("a", withText("Add a new Word"));
-  //   assertThat(pageSource()).contains("Add a Word to Shopping");
-  // }
 }
